@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 As this is a simple site and requires no routing, I decided to bootstrap with create-react-app.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
-To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components.  
+To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
+
+If `header` details need to be changed, I would use something like [React Helmet](https://github.com/nfl/react-helmet) to control the meta data, but this not needed here.
 
 ## Project structure
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
@@ -13,7 +15,19 @@ I have included the typical project structure I use. Some of these directrories 
 [Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**. The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/).
 
 ## Tests
-These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`. 
+These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking.
+
+## To do
+- [x] Chakra UI install and basic theme
+
+
+### styling
+- [ ] confirm hex values of linear gradient
+- [ ] confirm font sizes
+- [ ] component for cities input box
+- [ ] values endpoint
+- [ ] component for city value
+
 
 
 ## Available Scripts
