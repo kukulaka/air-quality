@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 As this is a simple site and requires no routing, I decided to bootstrap with create-react-app.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
-To speed up development time, I used [https://chakra-ui.com](Chakra UI) for UI components. I could have also used [https://styled-components.com/docs/basics](Styled components) or [https://emotion.sh/docs/introduction](Emotion). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [https://tailwindcss.com/docs/installation](TailwindCSS) and styled components.  
+To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components.  
 
 ## Http Requests
-[https://www.npmjs.com/package/axios](Axios) was used for Http requests. The baseurl is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**
+[Axios](https://www.npmjs.com/package/axios) was used for Http requests. The baseurl for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**
 
 ## Tests
 
