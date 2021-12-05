@@ -12,9 +12,8 @@ const PageContainer: FC<Props> = ({ children }: Props) => {
         direction="column"
         position="relative"
         minHeight="100vh"
-        bgGradient="linear(to-l, #0da2ff, #6a0dad)"
+        bgGradient="linear(to-r,  #6a0dad, #0da2ff)"
         align="center"
-        justifyContent="center"
       >
         <Box with="100%" padding="50px">
           {children}

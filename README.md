@@ -17,12 +17,14 @@ I have included the typical project structure I use. Some of these directrories 
 ## Tests
 These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking.
 
-## To do
+## Done
 - [x] Chakra UI install and basic theme
+- [x] Basic tests for checking Home and App component render ok
+- [x] request function using Axios
 
 
-### styling
-- [ ] confirm hex values of linear gradient
+### To Do
+- [ ] confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
 - [ ] confirm font sizes
 - [ ] component for cities input box
 - [ ] values endpoint

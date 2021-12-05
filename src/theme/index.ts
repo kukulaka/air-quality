@@ -5,7 +5,7 @@ const overrides = {
     global: () => ({
       'html, body': {
         overflowX: 'hidden',
-        fontSize: '25px',
+        fontSize: ['18px', '25px'],
         scrollBehavior: 'smooth',
         color: '#FFFFFF'
       },
@@ -13,7 +13,7 @@ const overrides = {
   },
   textStyles: {
     h1: {
-      fontSize: ['40px', '40px'],
+      fontSize: ['30px', '40px'],
       lineHeight: '100%',
       fontWeight:"bold"
     },
