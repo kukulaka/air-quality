@@ -1,6 +1,6 @@
 import axios, { Method, AxiosResponse } from 'axios';
 
-const api = axios.create({ baseURL: process.env.RREACT_APP_BASE_API });
+const api = axios.create({ baseURL: process.env.REACT_APP_BASE_API });
 
 const request = <T>(
   method: Method,

@@ -1,23 +1,27 @@
-export interface Cities {
-  meta: metaData;
-  results: city[];
+import { City } from './City';
+export interface AllCities {
+  meta: MetaData;
+  results: City[];
+  error: Error
 }
 
-interface metaData {
+export interface CitiesList {
+  cities: City[];
+
+}
+
+export interface Error {
+  meta: null;
+  results: null
+  error: boolean;
+  errorMsg: string | null;
+}
+
+interface MetaData {
   name: string;
   license: string;
   website: string;
   page: number;
   limit: number;
   found: number;
-}
-
-interface city {
-  country: string;
-  city: string;
-  count: number;
-  locations: number;
-  firstUpdated: string;
-  lastUpdated: string;
-  parameters: string[];
 }

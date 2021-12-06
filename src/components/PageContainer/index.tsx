@@ -15,7 +15,13 @@ const PageContainer: FC<Props> = ({ children }: Props) => {
         bgGradient="linear(to-r,  #6a0dad, #0da2ff)"
         align="center"
       >
-        <Box with="100%" padding="50px">
+        <Box
+          with="100%"
+          paddingTop="60px"
+          paddingLeft="20px"
+          paddingRight="20px"
+          paddingBottom="30px"
+        >
           {children}
         </Box>
       </Flex>

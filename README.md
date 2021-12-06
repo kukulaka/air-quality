@@ -12,21 +12,22 @@ If `header` details need to be changed, I would use something like [React Helmet
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
 
 ## Http Requests
-[Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**. The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/).
+[Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**. The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/). 
 
 ## Tests
-These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking.
+These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking. More tests should be included than this :smiley:
 
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
 - [x] request function using Axios
+- [x] component for cities input box
 
 
 ### To Do
 - [ ] confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
 - [ ] confirm font sizes
-- [ ] component for cities input box
+- [ ] Make styling for input box a little nicer
 - [ ] values endpoint
 - [ ] component for city value
 
