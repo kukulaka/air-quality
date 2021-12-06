@@ -2,17 +2,16 @@ import { City } from './City';
 export interface AllCities {
   meta: MetaData;
   results: City[];
-  error: Error
+  error: Error;
 }
 
 export interface CitiesList {
   cities: City[];
-
 }
 
 export interface Error {
   meta: null;
-  results: null
+  results: null;
   error: boolean;
   errorMsg: string | null;
 }

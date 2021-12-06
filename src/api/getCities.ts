@@ -4,7 +4,7 @@ import { AllCities, Error } from '../types/Cities';
 
 const getCities = async (): Promise<AllCities | Error | undefined> => {
   const cityURL: string =
-    '/v2/cities?limit=100&page=1&offset=0&sort=asc&country_id=GB&order_by=city';
+    '/cities?limit=100&page=1&offset=0&sort=asc&country_id=GB&order_by=city';
 
   return await request('GET', cityURL, {})
     .then((response) => {

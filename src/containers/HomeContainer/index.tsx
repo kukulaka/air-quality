@@ -6,6 +6,7 @@ import { City } from '../../../src/types/City';
 import getCities from '../../api/getCities';
 import TextHeader from './TextHeader';
 import SearchAndDisplay from './SearchAndDisplay';
+import AlertDisplay from '../../components/AlertDisplay';
 
 // getting the city data in this manner and this overall component
 // needs refactoring as think I can write this better....
@@ -34,23 +35,23 @@ const HomeContainer: React.FC = (Props) => {
   //especially this.
   React.useEffect(() => {
     if (allCitiesData) {
-    if (allCitiesData!.results) {
-      const cityArray: City[] = [];
-      allCitiesData!.results.map((city) => {
-        const cityObj = {
-          ...city,
-          label: city.city,
-          value: city.city,
-        };
-        cityArray.push(cityObj);
-      });
-      const cityUpdate: CitiesList = { cities: cityArray };
-      setCityList(cityUpdate);
+      if (allCitiesData!.results) {
+        const cityArray: City[] = [];
+        allCitiesData!.results.map((city) => {
+          const cityObj = {
+            ...city,
+            label: city.city,
+            value: city.city,
+          };
+          cityArray.push(cityObj);
+        });
+        const cityUpdate: CitiesList = { cities: cityArray };
+        setCityList(cityUpdate);
+      }
+      if (allCitiesData!.error) {
+        setError(true);
+      }
     }
-    if (allCitiesData!.error) {
-      setError(true);
-    }
-  }
   }, [allCitiesData]);
 
   return (
@@ -69,10 +70,10 @@ const HomeContainer: React.FC = (Props) => {
           ) : (
             <>
               {error ? (
-                <Alert status="error">
-                  <AlertIcon />
-                  There was an error retrieving cities data
-                </Alert>
+                <AlertDisplay
+                  status="error"
+                  description="There was an error retrieving cities data"
+                />
               ) : (
                 <>
                   {cityList && cityList.cities.length > 0 && (

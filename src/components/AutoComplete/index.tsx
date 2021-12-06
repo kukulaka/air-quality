@@ -2,7 +2,7 @@ import React from 'react';
 import { CUIAutoComplete } from 'chakra-ui-autocomplete';
 import { City } from '../../types/City';
 import { SearchIcon } from '@chakra-ui/icons';
-import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
+import { InputGroup, InputLeftElement, Input, Box} from '@chakra-ui/react';
 
 interface Props {
   label: string;
@@ -22,6 +22,7 @@ const AutoComplete: React.FC<Props> = ({
   const [pickerItems, setPickerItems] = React.useState(itemsList);
 
   return (
+    <Box width="100%" alignItems="center" justifyContent="center">
     <CUIAutoComplete
       label={label}
       placeholder={placeholder}
@@ -38,11 +39,12 @@ const AutoComplete: React.FC<Props> = ({
             pointerEvents="none"
             children={<SearchIcon color="gray.300" />}
           />
-          <Input {...inputProps} color="#ffffff" />
+          <Input {...inputProps} color="#ffffff" width="50%" />
         </InputGroup>
       )}
       listStyleProps={{ overflow: "auto", rounded:"md"}}
     />
+    </Box>
   );
 };
 
