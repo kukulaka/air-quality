@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Flex, Box } from '@chakra-ui/react';
 
 interface Props {
   children: JSX.Element;
 }
 
-const PageContainer: FC<Props> = ({ children }: Props) => {
+const PageContainer: React.FC<Props> = ({ children }: Props) => {
   return (
     <>
       <Flex
