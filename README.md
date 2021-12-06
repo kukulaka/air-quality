@@ -23,9 +23,10 @@ I have used a npm package for autocomplete component (chakra-ui-autocomplete) du
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
-- [x] request function using Axios
-- [x] component for cities input box
-
+- [x] Request function using Axios using base URL
+- [x] Autocomplete component for cities input box
+- [x] function to get all cities 
+- [x] grid layout for city child component
 
 ### To Do
 - [ ] confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
@@ -33,8 +34,6 @@ I have used a npm package for autocomplete component (chakra-ui-autocomplete) du
 - [ ] Make styling for input box a little nicer
 - [ ] values endpoint
 - [ ] component for city value
-
-
 
 ## Available Scripts
 
