@@ -6,7 +6,7 @@ As this is a simple site and requires no routing, I decided to bootstrap with cr
 
 To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
-If `header` details need to be changed, I would use something like [React Helmet](https://github.com/nfl/react-helmet) to control the meta data, but this not needed here.
+If `head` details need to be changed, I would use something like [React Helmet](https://github.com/nfl/react-helmet) to control the meta data, but this not needed here.
 
 ## Project structure
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
