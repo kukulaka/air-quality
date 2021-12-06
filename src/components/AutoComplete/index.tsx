@@ -4,7 +4,7 @@ import { City } from '../../types/City';
 import { SearchIcon } from '@chakra-ui/icons';
 import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
 
-export interface Props {
+interface Props {
   label: string;
   placeholder: string;
   itemsList: City[];

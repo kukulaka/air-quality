@@ -6,9 +6,9 @@ import { City } from '../../../src/types/City';
 import getCities from '../../api/getCities';
 import TextHeader from './TextHeader';
 import SearchAndDisplay from './SearchAndDisplay';
-interface Props {}
 
-const HomeContainer: FC<Props> = (Props) => {
+
+const HomeContainer: FC = (Props) => {
   const [allCitiesData, setAllCitiesData] = useState<Promise<
     AllCities | Error | undefined | null
   > | null>(null);

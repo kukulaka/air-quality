@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Text, Box } from '@chakra-ui/react';
-interface Props {}
 
-const TextHeader: FC<Props> = (Props) => {
+
+const TextHeader: FC= (Props) => {
   return (
     <>
       <Text textStyle="h1">Compare your Air</Text>

@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import { City } from '../../types/City';
 import { Grid, Box } from '@chakra-ui/react';
 
-export interface Props {
+interface Props {
   selectedItems: City[];
 }
 
