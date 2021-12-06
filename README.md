@@ -1,13 +1,17 @@
 #  :cloud: Air quality one page site
 
+ ## Introduction 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-As this is a simple site and requires no routing, it was bootstrapped with create-react-app typescript template.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
+As this is a simple site and requires no routing, it was bootstrapped with create-react-app typescript template.  If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
 To speed up development time, [Chakra UI](https://chakra-ui.com) was used for UI components. [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction) could also have been used. This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
-If `head` details need to be changed, something like [React Helmet](https://github.com/nfl/react-helmet) could be used to control the meta data, but this not needed here.
+If `head` details need to be changed, something like [React Helmet](https://github.com/nfl/react-helmet) could be used to control the meta data, but this is not needed here.
+## Depolyment location
 
+ This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality).
 ## Project structure
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
 
@@ -15,13 +19,16 @@ I have included the typical project structure I use. Some of these directrories 
 [Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!** The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/).
 
 ## Tests
-These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking. More tests should be included than this :smiley:
+These can be found in the `__tests__` directory. Tests can be run using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking. More tests should be included than this :smiley:
 
 
 ## Other notes
+
+### Autocomplete component
 I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the list of cities, and so when height is added to the list props, the list shows even when no cities are selected. :unamused:
 I needed to add `value` and `label` properties as there was no way to amend to accept other property names.  :unamused: :unamused: 
 
+### Air Quality API
 Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. To get city data `/v2/cities`. Parameters to reduce the response size were used included country code and city names. The endpoint `/v2/latest` is called every time a new city was selected. but in some scenarios, it might be better do one call with all the selected cities. 
 
 This endpoint has multiple locations per city, but the mockup pdf only requires one location to be shown per city. Therefore, the first item in the locations array was chosen for ease. If there was more time, there could be multiple cards per city in a parent div (box or similar) and these could be compared against all the locations in another city. 

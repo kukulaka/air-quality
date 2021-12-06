@@ -7,43 +7,50 @@ import getCities from '../../api/getCities';
 import TextHeader from './TextHeader';
 import SearchAndDisplay from './SearchAndDisplay';
 
+// getting the city data in this manner and this overall component
+// needs refactoring as think I can write this better....
+// component is a little long for my liking
 
 const HomeContainer: React.FC = (Props) => {
-  const [allCitiesData, setAllCitiesData] = React.useState<Promise<
+  const [allCitiesData, setAllCitiesData] = React.useState<
     AllCities | Error | undefined | null
-  > | null>(null);
+  >(null);
   const [error, setError] = React.useState<boolean>(false);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [cityList, setCityList] = React.useState<CitiesList | null>(null);
 
   React.useEffect(() => {
+    const getCityList = async () => {
+      const allData: AllCities | Error | undefined | null = await getCities();
+      setAllCitiesData(allData);
+    };
     if (!allCitiesData) {
       setLoading(true);
-      const allData = getCities();
-      setAllCitiesData(allData);
+      getCityList();
       setLoading(false);
     }
   }, []);
 
+  //especially this.
   React.useEffect(() => {
-    allCitiesData?.then((response) => {
-      if (response!.results) {
-        const cityArray: City[] = [];
-        response!.results.map((city) => {
-          const cityObj = {
-            ...city,
-            label: city.city,
-            value: city.city,
-          };
-          cityArray.push(cityObj);
-        });
-        const cityUpdate: CitiesList = { cities: cityArray };
-        setCityList(cityUpdate);
-      }
-      if (response!.error) {
-        setError(true);
-      }
-    });
+    if (allCitiesData) {
+    if (allCitiesData!.results) {
+      const cityArray: City[] = [];
+      allCitiesData!.results.map((city) => {
+        const cityObj = {
+          ...city,
+          label: city.city,
+          value: city.city,
+        };
+        cityArray.push(cityObj);
+      });
+      const cityUpdate: CitiesList = { cities: cityArray };
+      setCityList(cityUpdate);
+    }
+    if (allCitiesData!.error) {
+      setError(true);
+    }
+  }
   }, [allCitiesData]);
 
   return (
