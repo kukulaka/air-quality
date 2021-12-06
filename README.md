@@ -21,6 +21,8 @@ These can be found in the `__tests__` directory. Tests can be ran using `yarn te
 ## Other notes
 I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected. :unamused:
 I needed to add `value` and `label` properties as there was no way to amend to accept other property names.  :unamused: :unamused: 
+
+Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. The endpoint is called every timea new city was selected. but in some scenarios, it might be better do one call with all the cities. This endpoint has multiple locations per city, but the wireframe pdf only requires one location to be shown per city. Therefore, the first item in the locations array was chosen for ease. If there was more time, there could be multiple cards per city and these could be compared against all the locations in another city. 
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
