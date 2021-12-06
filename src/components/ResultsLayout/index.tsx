@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
+import React from 'react';
 
 import { City } from '../../types/City';
 import { Grid, Box } from '@chakra-ui/react';
 
-export interface Props {
+interface Props {
   selectedItems: City[];
 }
 
-const ResultsLayout: FC<Props> = ({ selectedItems }) => {
+const ResultsLayout: React.FC<Props> = ({ selectedItems }) => {
   return (
     <Grid
       templateColumns={['1fr', 'repeat(3, 1fr)']}

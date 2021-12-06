@@ -1,10 +1,10 @@
-import React, { FC, useState } from 'react';
+import React from 'react';
 import { CUIAutoComplete } from 'chakra-ui-autocomplete';
 import { City } from '../../types/City';
 import { SearchIcon } from '@chakra-ui/icons';
 import { InputGroup, InputLeftElement, Input } from '@chakra-ui/react';
 
-export interface Props {
+interface Props {
   label: string;
   placeholder: string;
   itemsList: City[];
@@ -12,14 +12,14 @@ export interface Props {
   handleSelectedItemsChange(selectedItems?: City[]): any;
 }
 
-const AutoComplete: FC<Props> = ({
+const AutoComplete: React.FC<Props> = ({
   label,
   placeholder,
   itemsList,
   handleSelectedItemsChange,
   selectedItems,
 }) => {
-  const [pickerItems, setPickerItems] = useState(itemsList);
+  const [pickerItems, setPickerItems] = React.useState(itemsList);
 
   return (
     <CUIAutoComplete

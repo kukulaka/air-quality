@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React from 'react';
 import PageContainer from '../../components/PageContainer';
 import { Box, Spinner, Alert, AlertIcon } from '@chakra-ui/react';
 import { AllCities, Error, CitiesList } from '../../../src/types/Cities';
@@ -6,17 +6,17 @@ import { City } from '../../../src/types/City';
 import getCities from '../../api/getCities';
 import TextHeader from './TextHeader';
 import SearchAndDisplay from './SearchAndDisplay';
-interface Props {}
 
-const HomeContainer: FC<Props> = (Props) => {
-  const [allCitiesData, setAllCitiesData] = useState<Promise<
+
+const HomeContainer: React.FC = (Props) => {
+  const [allCitiesData, setAllCitiesData] = React.useState<Promise<
     AllCities | Error | undefined | null
   > | null>(null);
-  const [error, setError] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [cityList, setCityList] = useState<CitiesList | null>(null);
+  const [error, setError] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState<boolean>(false);
+  const [cityList, setCityList] = React.useState<CitiesList | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!allCitiesData) {
       setLoading(true);
       const allData = getCities();
@@ -25,7 +25,7 @@ const HomeContainer: FC<Props> = (Props) => {
     }
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     allCitiesData?.then((response) => {
       if (response!.results) {
         const cityArray: City[] = [];

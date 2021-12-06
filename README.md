@@ -2,11 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-As this is a simple site and requires no routing, I decided to bootstrap with create-react-app typescript template.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
+As this is a simple site and requires no routing, it was bootstrapped with create-react-app typescript template.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
-To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
+To speed up development time, [Chakra UI](https://chakra-ui.com) was used for UI components. [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction) could also have been used. This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
-If `head` details need to be changed, I would use something like [React Helmet](https://github.com/nfl/react-helmet) to control the meta data, but this not needed here.
+If `head` details need to be changed, something like [React Helmet](https://github.com/nfl/react-helmet) could be used to control the meta data, but this not needed here.
 
 ## Project structure
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
@@ -21,6 +21,8 @@ These can be found in the `__tests__` directory. Tests can be ran using `yarn te
 ## Other notes
 I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected. :unamused:
 I needed to add `value` and `label` properties as there was no way to amend to accept other property names.  :unamused: :unamused: 
+
+Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. The endpoint is called every timea new city was selected. but in some scenarios, it might be better do one call with all the cities. This endpoint has multiple locations per city, but the wireframe pdf only requires one location to be shown per city. Therefore, the first item in the locations array was chosen for ease. If there was more time, there could be multiple cards per city and these could be compared against all the locations in another city. 
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok

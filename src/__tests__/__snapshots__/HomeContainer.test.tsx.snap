@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home container should retrieve city data on load t1 1`] = `ShallowWrapper {}`;

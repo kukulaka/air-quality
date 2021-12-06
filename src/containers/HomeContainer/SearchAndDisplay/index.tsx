@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React from 'react';
 import AutoComplete from '../../../components/AutoComplete';
 import { City } from '../../../types/City';
 import ResultsLayout from '../../../components/ResultsLayout';
@@ -9,8 +9,8 @@ export interface Props {
   itemsList: City[];
 }
 
-const SearchAndDisplay: FC<Props> = ({ label, placeholder, itemsList }) => {
-  const [selectedItems, setSelectedItems] = useState<City[]>([]);
+const SearchAndDisplay: React.FC<Props> = ({ label, placeholder, itemsList }) => {
+  const [selectedItems, setSelectedItems] = React.useState<City[]>([]);
 
   const handleSelectedItemsChange = (selectedItems?: City[]) => {
     if (selectedItems) {
