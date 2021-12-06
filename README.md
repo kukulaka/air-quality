@@ -9,7 +9,7 @@ As this is a simple site and requires no routing, it was bootstrapped with creat
 To speed up development time, [Chakra UI](https://chakra-ui.com) was used for UI components. [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction) could also have been used. This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
 If `head` details need to be changed, something like [React Helmet](https://github.com/nfl/react-helmet) could be used to control the meta data, but this is not needed here.
-## Depolyment location
+##  Deployment
 
  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality).
 ## Project structure
