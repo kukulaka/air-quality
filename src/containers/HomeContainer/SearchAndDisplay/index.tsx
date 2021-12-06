@@ -8,7 +8,7 @@ export interface Props {
   itemsList: City[];
 }
 
-const SearchAnDisplay: FC<Props> = ({ label, placeholder, itemsList }) => {
+const SearchAndDisplay: FC<Props> = ({ label, placeholder, itemsList }) => {
   const [selectedItems, setSelectedItems] = useState<City[]>([]);
 
   const handleSelectedItemsChange = (selectedItems?: City[]) => {
@@ -30,4 +30,4 @@ const SearchAnDisplay: FC<Props> = ({ label, placeholder, itemsList }) => {
   );
 };
 
-export default SearchAnDisplay;
+export default SearchAndDisplay;

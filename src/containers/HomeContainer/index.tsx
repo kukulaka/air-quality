@@ -1,12 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
 import PageContainer from '../../components/PageContainer';
-import {  Box, Spinner } from '@chakra-ui/react';
+import { Box, Spinner, Alert, AlertIcon } from '@chakra-ui/react';
 import { AllCities, Error, CitiesList } from '../../../src/types/Cities';
 import { City } from '../../../src/types/City';
 import getCities from '../../api/getCities';
 import TextHeader from './TextHeader';
-import SearchAndDisplay from './SearchAndDisplay'
-import SearchAnDisplay from './SearchAndDisplay';
+import SearchAndDisplay from './SearchAndDisplay';
 interface Props {}
 
 const HomeContainer: FC<Props> = (Props) => {
@@ -51,17 +50,32 @@ const HomeContainer: FC<Props> = (Props) => {
     <PageContainer>
       <Box width="100%" height="100%" textAlign="center">
         <TextHeader />
-        <Box paddingTop="30px" paddingBottom="30px" color="#000000" fontSize="16px" width="100%">
+        <Box
+          paddingTop="30px"
+          paddingBottom="30px"
+          color="#000000"
+          fontSize="16px"
+          width="100%"
+        >
           {loading ? (
             <Spinner />
           ) : (
             <>
-              {cityList && cityList.cities.length > 0 && (
-                <SearchAnDisplay
-                  label="Search City"
-                  placeholder="Type City name"
-                  itemsList={cityList!.cities}
-                />
+              {error ? (
+                <Alert status="error">
+                  <AlertIcon />
+                  There was an error retrieving cities data
+                </Alert>
+              ) : (
+                <>
+                  {cityList && cityList.cities.length > 0 && (
+                    <SearchAndDisplay
+                      label=""
+                      placeholder="Type City name"
+                      itemsList={cityList!.cities}
+                    />
+                  )}
+                </>
               )}
             </>
           )}
