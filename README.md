@@ -22,7 +22,9 @@ These can be found in the `__tests__` directory. Tests can be ran using `yarn te
 I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the list of cities, and so when height is added to the list props, the list shows even when no cities are selected. :unamused:
 I needed to add `value` and `label` properties as there was no way to amend to accept other property names.  :unamused: :unamused: 
 
-Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. To get city data `/v2/cities`. Parameters to reduce the response size were used included country code and city names. The endpoint `/v2/latest` is called every time a new city was selected. but in some scenarios, it might be better do one call with all the selected cities. This endpoint has multiple locations per city, but the wireframe pdf only requires one location to be shown per city. Therefore, the first item in the locations array was chosen for ease. If there was more time, there could be multiple cards per city and these could be compared against all the locations in another city. 
+Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. To get city data `/v2/cities`. Parameters to reduce the response size were used included country code and city names. The endpoint `/v2/latest` is called every time a new city was selected. but in some scenarios, it might be better do one call with all the selected cities. 
+
+This endpoint has multiple locations per city, but the mockup pdf only requires one location to be shown per city. Therefore, the first item in the locations array was chosen for ease. If there was more time, there could be multiple cards per city in a parent div (box or similar) and these could be compared against all the locations in another city. 
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
