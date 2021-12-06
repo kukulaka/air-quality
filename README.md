@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-As this is a simple site and requires no routing, I decided to bootstrap with create-react-app.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
+As this is a simple site and requires no routing, I decided to bootstrap with create-react-app typescript template.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
 To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
@@ -20,20 +20,22 @@ These can be found in the `__tests__` directory. Tests can be ran using `yarn te
 
 ## Other notes
 I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected. :unamused:
+I needed to add `value` and `label` properties as there was no way to amend to accept other property names.  :unamused: :unamused: 
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
 - [x] Request function using Axios using base URL
 - [x] Autocomplete component for cities input box
-- [x] function to get all cities 
-- [x] grid layout for city child component
+- [x] Function to get all cities 
+- [x] Grid layout for city child component
 
 ### To Do
-- [ ] confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
-- [ ] confirm font sizes
+- [ ] Confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
+- [ ] Confirm font sizes
 - [ ] Make styling for input box a little nicer
-- [ ] values endpoint
-- [ ] component for city value
+- [ ] Values endpoint
+- [ ] Component for city value
+- [ ] Custom component for autocomplete 
 
 ## Available Scripts
 
