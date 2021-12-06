@@ -2,7 +2,6 @@ import React from 'react';
 import AutoComplete from '../../../components/AutoComplete';
 import { City } from '../../../types/City';
 import ResultsLayout from '../../../components/ResultsLayout';
-import { Box } from '@chakra-ui/react';
 
 interface Props {
   label: string;

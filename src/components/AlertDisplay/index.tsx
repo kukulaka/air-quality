@@ -1,21 +1,19 @@
 import React from 'react';
-import { Alert, AlertIcon   } from '@chakra-ui/react';
-
+import { Alert, AlertIcon } from '@chakra-ui/react';
 
 interface Props {
   status: string;
-  description:  string;
+  description: string;
 }
 
-const  AlertDisplay: React.FC<Props> = ({ status, description }) => {
-  
+const AlertDisplay: React.FC<Props> = ({ status, description }) => {
   return (
-   <>
-          <Alert status="error">
-            <AlertIcon />
-            There was an error retrieving locations data
-          </Alert>
-  </>
+    <>
+      <Alert status="error">
+        <AlertIcon />
+       {description}
+      </Alert>
+    </>
   );
 };
 

@@ -21,7 +21,7 @@ const ResultsLayout: React.FC<Props> = ({ selectedItems }) => {
   const [loading, setLoading] = React.useState<boolean>(false);
 
   const handleRemoveLocation = (location: string) => {
-    console.log('got here')
+    console.log('got here');
     //delete from results array and replace
     if (allLocations && allLocations.results) {
       const resultsClone = [...allLocations.results];

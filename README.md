@@ -30,7 +30,7 @@ These can be found in the `__tests__` directory. Tests can be run using `yarn te
 
 ### Autocomplete component
 
-I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints. If I had more time would make my own. The component does not currently have a custom render for the list of cities, and so when height is added to the list props, the list shows even when no cities are selected. :unamused:
+I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints. **If I had more time would make my own as it does not quite meet the spec needs**. The component does not currently have a custom render for the list of cities, and so when height is added to the list props, the list shows even when no cities are selected. :unamused:
 I needed to add `value` and `label` properties as there was no way to amend to accept other property names. :unamused: :unamused:
 
 There also seems to be a bug with setting the color of the input. The components includes tags by default, with no way to switch them off. However, I think they look kind of cool and provide a way of deleting all locations for a city.
@@ -60,9 +60,10 @@ On the delete call to action, only that specific location will be removed from t
 - [ ] Confirm hex values of linear gradient so it can be a bit nicer and match the mockup pdf
 - [ ] Confirm font sizes
 - [ ] Make styling for input box a little nicer - it currently does mot match mockup completely
-- [ ] Custom component for autocomplete
+- [ ] Custom component for autocomplete - this is currently a package component to save time, but does not match spec completely
 
-## Suggestions 
+## Suggestions
+
 - Include the measurement unit
 - Group locations by city (if there is more than one)
 

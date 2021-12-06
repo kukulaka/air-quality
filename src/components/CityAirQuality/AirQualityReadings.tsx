@@ -11,9 +11,9 @@ const AirQualityReadings: React.FC<Props> = ({ measurements }) => {
     let itemslist: string = '';
     if (measurements && measurements.length > 0) {
       measurements.map((item, i, arr) => {
-        itemslist = `${itemslist} ${item.parameter.toUpperCase()}: ${item.value}${
-          i != arr.length - 1 ? ',' : ''
-        }`;
+        itemslist = `${itemslist} ${item.parameter.toUpperCase()}: ${
+          item.value
+        }${i != arr.length - 1 ? ',' : ''}`;
       });
       return itemslist;
     } else return '';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PageContainer from '../../components/PageContainer';
-import { Box, Spinner, Alert, AlertIcon } from '@chakra-ui/react';
+import { Box, Spinner } from '@chakra-ui/react';
 import { AllCities, Error, CitiesList } from '../../../src/types/Cities';
 import { City } from '../../../src/types/City';
 import getCities from '../../api/getCities';

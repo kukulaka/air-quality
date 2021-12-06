@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Icon, Button } from '@chakra-ui/react';
+import { Box, Text, Icon } from '@chakra-ui/react';
 import { Location } from '../../types/AirQuality';
 import DateSinceLastUpdate from './DateSinceLastUpdate';
 import AirQualityReadings from './AirQualityReadings';
