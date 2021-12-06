@@ -23,7 +23,7 @@ const AutoComplete: FC<Props> = ({
 
   return (
     <CUIAutoComplete
-      label={''}
+      label={label}
       placeholder={placeholder}
       items={pickerItems}
       disableCreateItem={true}
@@ -41,6 +41,7 @@ const AutoComplete: FC<Props> = ({
           <Input {...inputProps} color="#ffffff" />
         </InputGroup>
       )}
+      listStyleProps={{ overflow: "auto", rounded:"md"}}
     />
   );
 };

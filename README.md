@@ -17,6 +17,9 @@ I have included the typical project structure I use. Some of these directrories 
 ## Tests
 These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking. More tests should be included than this :smiley:
 
+
+## Other notes
+I have used a npm package for autocomplete  component due to time contraints, but if  I hade more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected.
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok

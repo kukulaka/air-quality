@@ -14,14 +14,9 @@ const PageContainer: FC<Props> = ({ children }: Props) => {
         minHeight="100vh"
         bgGradient="linear(to-r,  #6a0dad, #0da2ff)"
         align="center"
+        justifyContent="center"
       >
-        <Box
-          with="100%"
-          paddingTop="60px"
-          paddingLeft="20px"
-          paddingRight="20px"
-          paddingBottom="30px"
-        >
+        <Box with="100%" padding="20px">
           {children}
         </Box>
       </Flex>

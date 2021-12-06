@@ -40,7 +40,6 @@ const HomeContainer: FC<Props> = (Props) => {
         });
         const cityUpdate: CitiesList = { cities: cityArray };
         setCityList(cityUpdate);
-        console.log(response!.results);
       }
       if (response!.error) {
         setError(true);
@@ -60,7 +59,7 @@ const HomeContainer: FC<Props> = (Props) => {
               {cityList && cityList.cities.length > 0 && (
                 <SearchAnDisplay
                   label="Search City"
-                  placeholder="Search City"
+                  placeholder="Type City name"
                   itemsList={cityList!.cities}
                 />
               )}
