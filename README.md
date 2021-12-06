@@ -12,7 +12,7 @@ If `header` details need to be changed, I would use something like [React Helmet
 I have included the typical project structure I use. Some of these directrories will be empty due to this being a small project. 
 
 ## Http Requests
-[Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!**. The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/). 
+[Axios](https://www.npmjs.com/package/axios) was used for Http requests. The base url for the Air Quality API is stored in the env file. **Have included an example env in the repo, but this would not normally be pushed to the repo!** The swagger for the air quality API can be found at [https://docs.openaq.org/](https://docs.openaq.org/). 
 
 ## Tests
 These can be found in the `__tests__` directory. Tests can be ran using `yarn test` and `yarn test:watch`.  [Jest](https://jestjs.io/) to run tests and [Enzyme](https://enzymejs.github.io/enzyme/) for mocking. More tests should be included than this :smiley:
@@ -60,5 +60,4 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `yarn deploy`
-This deploys the project to [https://kukulaka.github.io/air-quality/](https://kukulaka.github.io/air-quality/). You must run `yarn build` first.
-
+This deploys the project to [https://kukulaka.github.io/air-quality/](https://kukulaka.github.io/air-quality/).
