@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 As this is a simple site and requires no routing, I decided to bootstrap with create-react-app typescript template.  This project is deployed to [https://kukulaka.github.io/air-quality](https://kukulaka.github.io/air-quality). If this was a more complex project, I would use NextJS and take advantage of the file based routing approach.  
 
-To speed up development time, I used [Chakra UI](https://chakra-ui.com) for UI components. I could have also used [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction). This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
+To speed up development time, [Chakra UI](https://chakra-ui.com) was used for UI components. [Styled Components](https://styled-components.com/docs/basics) or [Emotion](https://emotion.sh/docs/introduction) could also have been used. This is my preference rather than using seperate style sheets as its easy to keep track of specific styles for components, and prevents class name bugs. Other approches could have included [TailwindCSS](https://tailwindcss.com/docs/installation) and styled components. 
 
 If `head` details need to be changed, I would use something like [React Helmet](https://github.com/nfl/react-helmet) to control the meta data, but this not needed here.
 
