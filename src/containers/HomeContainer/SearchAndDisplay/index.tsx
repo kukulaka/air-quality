@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import AutoComplete from '../../../components/AutoComplete';
 import { City } from '../../../types/City';
+import ResultsLayout from '../../../components/ResultsLayout';
 
 export interface Props {
   label: string;
@@ -26,6 +27,7 @@ const SearchAndDisplay: FC<Props> = ({ label, placeholder, itemsList }) => {
         handleSelectedItemsChange={handleSelectedItemsChange}
         selectedItems={selectedItems}
       />
+      <ResultsLayout selectedItems={selectedItems}/>
     </>
   );
 };

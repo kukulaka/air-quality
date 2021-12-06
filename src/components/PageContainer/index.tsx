@@ -15,6 +15,7 @@ const PageContainer: FC<Props> = ({ children }: Props) => {
         bgGradient="linear(to-r,  #6a0dad, #0da2ff)"
         align="center"
         justifyContent="center"
+        overflow="auto"
       >
         <Box with="100%" padding="20px">
           {children}

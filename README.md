@@ -19,7 +19,7 @@ These can be found in the `__tests__` directory. Tests can be ran using `yarn te
 
 
 ## Other notes
-I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected.
+I have used a npm package for autocomplete component (chakra-ui-autocomplete) due to time contraints.  If I had more time would make my own. The component does not currently have a custom render for the List of cities, and so when height is added to the listprops, the list shows even when no cities are selected. :unamused:
 ## Done
 - [x] Chakra UI install and basic theme
 - [x] Basic tests for checking Home and App component render ok
