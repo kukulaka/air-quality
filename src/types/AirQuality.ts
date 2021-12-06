@@ -25,9 +25,9 @@ interface LatLong {
   longitude: number;
 }
 
-interface Measurements {
+export interface Measurements {
   parameter: string;
-  valu: number;
+  value: number;
   lastUpdated: string;
   unit: string;
 }

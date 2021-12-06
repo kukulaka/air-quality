@@ -79,7 +79,7 @@ const HomeContainer: React.FC = (Props) => {
                   {cityList && cityList.cities.length > 0 && (
                     <SearchAndDisplay
                       label=""
-                      placeholder="Type City name"
+                      placeholder="Enter city name..."
                       itemsList={cityList!.cities}
                     />
                   )}
