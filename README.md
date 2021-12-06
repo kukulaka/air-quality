@@ -34,7 +34,7 @@ This endpoint has multiple locations per city, but the mockup pdf only requires 
 - [x] Grid layout for city child component
 
 ### To Do
-- [ ] Confirm hex values of linear gradient so it can be a bit nicer and match the wireframe pdf
+- [ ] Confirm hex values of linear gradient so it can be a bit nicer and match the mockup pdf
 - [ ] Confirm font sizes
 - [ ] Make styling for input box a little nicer
 - [ ] Values endpoint
