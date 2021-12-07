@@ -4,7 +4,7 @@ import { AirQuality, Error } from '../types/AirQuality';
 const getAirQualityByCity = async (
   cities: string
 ): Promise<AirQuality | Error | undefined> => {
-  console.log('cities', cities)
+  console.log('cities', cities);
   const airValueURL: string = `/latest?limit=100&page=1&offset=0&sort=asc&radius=10&country_id=GB${cities}&order_by=lastUpdated&dumpRaw=false`;
 
   return await request('GET', airValueURL, {})
