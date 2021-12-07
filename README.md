@@ -38,6 +38,7 @@ There also seems to be a bug with setting the color of the input. The components
 ### Air Quality API
 
 Air Quality location data - to get the air quality values the endpoint `/v2/latest` was used. To get city data `/v2/cities`. Parameters to reduce the response size were used included country code and city names. The endpoint `/v2/latest` is called every time a new city was selected. but in some scenarios, it might be better do one call with all the selected cities.
+The latest data could be restricted by entered dates for the last year, but I did not do this. 
 
 ### CityAirQuality component
 
