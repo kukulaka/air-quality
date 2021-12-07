@@ -7,7 +7,7 @@ const overrides = {
         overflowX: 'hidden',
         fontSize: ['18px', '25px'],
         scrollBehavior: 'smooth',
-        color: '#FFFFFF'
+        color: '#FFFFFF',
       },
     }),
   },
@@ -15,7 +15,7 @@ const overrides = {
     h1: {
       fontSize: ['30px', '40px'],
       lineHeight: '100%',
-      fontWeight:"bold"
+      fontWeight: 'bold',
     },
     h2: {
       fontSize: ['36px', '48px'],
